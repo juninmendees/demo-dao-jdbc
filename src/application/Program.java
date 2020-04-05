@@ -41,6 +41,13 @@ public class Program {
 		sellerDao.insert(newseller);
 		
 		System.out.println("Inserção realizada com sucesso! ID Gerado: " +newseller.getId());
+		
+		System.out.println("\n=== TEST 5: Seller Update ===");
+		newseller = sellerDao.findById(8);
+		newseller.setName("Martha Waine");
+		sellerDao.update(newseller);
+		
+		System.out.println("Update completed");
 
 	}
 }
